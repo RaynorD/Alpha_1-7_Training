@@ -9,7 +9,9 @@
 2. Run [/setup_dev.py](setup_dev.py)
 3. Make and test desired changes
 
-**NOTE: You cannot use Export > Export to Multiplayer in Eden to build PBOs from the symlinked files. Any files in folders will not be copied to the pbo.**
+- Missions can be accessed in Eden under **7Cav A-1-7**
+- Modify mission files inside the [/files](https://github.com/RaynorD/Alpha_1-7_Training/tree/master/files) folder
+- **You cannot use Export > Export to Multiplayer in Eden to build PBOs from the symlinked files. Any files in folders will not be copied to the pbo.**
 
 ### 3. Building a Release
 1. Run [/build_release.py](build_release.py) (requires Arma 3 tools)
