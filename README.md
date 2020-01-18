@@ -5,8 +5,11 @@
 - Arma 3 Tools (optional)
 
 ### 2. Development
-1. Run [/setup_dev.py](setup_dev.py)
-2. Make and test desired changes
+1. Clone repo to your computer
+2. Run [/setup_dev.py](setup_dev.py)
+3. Make and test desired changes
+
+**NOTE: You cannot use Export > Export to Multiplayer in Eden to build PBOs from the symlinked files. Any files in folders will not be copied to the pbo.**
 
 ### 3. Testing on Dedicated Server
 1. Run [/build_test_release.py](build_test_release.py) (requires Arma 3 tools)
