@@ -60,6 +60,8 @@
         #include "cScripts\CavFnc\CfgFunctions.hpp"
         #include "cScripts\Loadouts\script\CfgFunctions.hpp"
         #include "cScripts\ViewingDistance\CfgFunctions.hpp"
+		
+		// Added by Raynor
         #include "RaynorsTeleporter\cfgFunctions.hpp"
     };
     #include "cScripts\Loadouts\script\CfgPoppy.hpp"
