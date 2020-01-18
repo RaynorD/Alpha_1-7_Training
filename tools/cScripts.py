@@ -13,7 +13,7 @@ def pull():
     print("")
 
     # Checkout latest cScripts release
-    print("===== Checking out latest cScripts release")
+    print("  ===== Checking out latest cScripts release")
 
     os.chdir(cscriptspath)
     subprocess.check_output(["git", "config", "--global", "advice.detachedHead","false"])
@@ -24,24 +24,24 @@ def pull():
 
     subprocess.check_output(["git", "checkout", commit_id])
 
-    print("===== Pulled cScripts latest release: {}".format(tag_text))
-    
-    print("")
-    print("")
+    print("  ===== Pulled cScripts latest release: {}".format(tag_text))
 
 def copy():
-    print("Deleting old cScripts")
+    print("  ===== Copying cScripts into files")
     
-    os.chdir(os.path.join(projectpath,"files"))
+    filespath = os.path.join(projectpath,"files")
     
-    # Remove cScripts folder
-    shutil.rmtree(os.path.join(projectpath,"files","cScripts"))
+    # copy cScripts folder
+    if(os.path.isdir(os.path.join(filespath,"cScripts"))):
+        shutil.rmtree(os.path.join(filespath,"cScripts"))
+
+    shutil.copytree(os.path.join(cscriptspath,"cScripts"),os.path.join(filespath,"cScripts"))
     
-    # Remove cScripts-X.X.X.md
-    for file in os.listdir('.'):
-        if fnmatch.fnmatch(file, 'cScripts-*'):
-            
-            os.remove(file)
+    # copy files
+    shutil.copy(os.path.join(cscriptspath,"cba_settings.sqf"),os.path.join(filespath,"cba_settings.sqf"))
+    shutil.copy(os.path.join(cscriptspath,"initServer.sqf"),os.path.join(filespath,"initServer.sqf"))
+    
+    print("  ===== cScripts updated. Reminder: init.sqf and description.ext were not replaced.")
 
 if __name__ == '__main__':
     #pull()

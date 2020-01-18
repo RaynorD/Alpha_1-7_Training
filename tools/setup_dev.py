@@ -7,6 +7,11 @@ import winreg
 from pathlib import Path
 import cScripts
 
+scriptpath = Path(os.path.realpath(__file__))
+
+projectpath = scriptpath.parent.parent
+print("Project Path: {}".format(projectpath))
+
 def main():
     print("""
   #######################################
@@ -27,13 +32,16 @@ def main():
   """)
     print("\n")
 
-    scriptpath = Path(os.path.realpath(__file__))
-
-    projectpath = scriptpath.parent.parent
-    print("Project Path: {}".format(projectpath))
-    
-
+    cScripts.pull()
     cScripts.copy()
+    
+    os.chdir(projectpath)
+    os.mkdir("missions")
+    
+    return 0
+
+def make_links():
+    
     
     return 0
 
