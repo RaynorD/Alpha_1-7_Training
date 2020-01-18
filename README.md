@@ -11,13 +11,6 @@
 
 **NOTE: You cannot use Export > Export to Multiplayer in Eden to build PBOs from the symlinked files. Any files in folders will not be copied to the pbo.**
 
-### 3. Testing on Dedicated Server
-1. Run [/build_test_release.py](build_test_release.py) (requires Arma 3 tools)
-2. Copy pbos from [/pbo](https://github.com/RaynorD/Alpha_1-7_Training/tree/master/pbo) to server and test
-
-### 4. Pushing a Release
-1. Ensure changes have been pushed/merged to master branch
-2. Create a tag on the master branch named the new version (vX.X.X)
-3. (Automatic) PBOs are built via Github action (suffixed with tag name)
-4. (Automatic) Zip is packed and uploaded as release (named same as tag)
-5. Send release zip to S6 for upload
+### 3. Building a Release
+1. Run [/build_release.py](build_release.py) (requires Arma 3 tools)
+2. Copy zip from [/release](https://github.com/RaynorD/Alpha_1-7_Training/tree/master/release) for dedicated testing and release.
