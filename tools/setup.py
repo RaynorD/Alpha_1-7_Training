@@ -65,25 +65,41 @@ def main():
         return code
     
     return 0
+    
+def clear_folder_recursive(folder):
+    fileList = os.listdir(folder)
+    
+    for file in fileList:
+        fullpath = os.path.join(folder, file)
+        if(os.path.isfile(fullpath)):
+            #os.chmod(fullpath, stat.S_IRWXU | stat.S_IRWXG | stat.S_IRWXO)
+            os.remove(fullpath)
+        elif os.path.islink(fullpath):
+            os.unlink(fullpath)
+        elif os.path.isdir(fullpath):
+            if len(os.listdir(fullpath)) > 0:
+                clear_folder_recursive(fullpath)
+            shutil.rmtree(os.path.join(folder,file))
+    return
 
 def clear_folder(folder):
-    parentFolder = os.path.dirname(folder)
-    os.chdir(parentFolder)
-    if(os.path.isdir(folder)):
-        print("  Removing folder {}".format(folder))
-        dirs = os.listdir(".")
-        for dir in dirs:
-            if(os.path.isdir(os.path.join(folder,dir))):
-                shutil.rmtree(dir)
-        time.sleep(0.5)
-        print("    parentFolder = {}".format(parentFolder))
+    if os.path.isdir(folder):
+        parentFolder = os.path.dirname(folder)
+        os.chdir(parentFolder)
+        print("  Clearing folder {}".format(folder))
+        
+        #print("    parentFolder = {}".format(parentFolder))
         tmp = tempfile.mkdtemp(dir=parentFolder)
         time.sleep(0.5)
-        print("    tmp = {}".format(tmp))
+        #print("    tmp = {}".format(tmp))
         shutil.move(folder, tmp)
         time.sleep(0.5)
-        shutil.rmtree(tmp)
+        
+        clear_folder_recursive(tmp)
+        
         time.sleep(0.5)
+        shutil.rmtree(tmp)
+
     os.mkdir(os.path.basename(os.path.normpath(folder)))
     return
 
@@ -138,14 +154,10 @@ def make_folders():
     profileMissionsFolder = os.path.join(armaprofilesfolder,profileName,"missions")
     print("  Using missions folder: {}".format(profileMissionsFolder))
     
+    os.chdir(profileMissionsFolder)
     global A17Folder
     A17Folder = os.path.join(profileMissionsFolder,"A-1-7")
     clear_folder(A17Folder)
-    
-    os.chdir(profileMissionsFolder)
-    time.sleep(0.25)
-    
-    os.mkdir("A-1-7")
     return 0
 
 def make_links():

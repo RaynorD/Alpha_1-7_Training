@@ -80,6 +80,7 @@ def extract(data):
         zip_ref.extractall(cscriptspath)
     
     #modify init.sqf
+    print("  Modifying init.sqf")
     os.chdir(cscriptspath)
     with open("init.sqf", "a") as f:
         f.write("\n// Added by Raynor\n{[_x] execVM 'scripts\\aircraftWarningLights.sqf'} foreach allMissionObjects 'Land_LampHalogen_F';\n")
@@ -99,7 +100,7 @@ def extract(data):
         if(str.startswith(l,'    class CfgFunctions')):
             break
     
-    print("found cfgFunctions at line {}".format(index))
+    print("  Modifying description.ext at line {}".format(index))
     contents.insert(index, "        // Added by Raynor\n        #include \"RaynorsTeleporter\\cfgFunctions.hpp\"\n\n")
     
     include = "#include \"author.hpp\""
