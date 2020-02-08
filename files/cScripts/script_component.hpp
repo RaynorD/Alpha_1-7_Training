@@ -1,5 +1,5 @@
 #define PREFIX cScripts
-#define VERSION "4.3.15"
+#define VERSION "4.3.17"
 
 #define MAINCLANTAG "7CAV"
 

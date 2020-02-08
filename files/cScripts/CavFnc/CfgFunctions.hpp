@@ -14,7 +14,8 @@ class cScripts {
         class initTagging {};
 
         class initFortify {};
-
+        class initItemReplace {};
+        
         class initCuratorObjectPlaced {};
     };
     class documents {
@@ -72,7 +73,8 @@ class cScripts {
 
         class getRadioChannel {};
         class setRadioChannel {};
-
+        class setActiveRadio {};
+        
         class getCompanyVariable {};
         class hasCompanyVariable {};
         
@@ -146,7 +148,7 @@ class cScripts {
 
     class helpers {
         file = "cScripts\cavFnc\functions\helpers";
-        class exportBoxToArsenal {};
+        class exportContainerToArsenal {};
         class exportLoadoutsToArsenal {};
     };
 
