@@ -64,4 +64,4 @@ if (isMultiplayer) then {
 /* APPLY STUFF ONLY BELOW THIS LINE */
 
 // Added by Raynor
-{[_x] execVM "scripts\aircraftWarningLights.sqf"} foreach allMissionObjects "Land_LampHalogen_F";
+{[_x] execVM 'scripts\aircraftWarningLights.sqf'} foreach allMissionObjects 'Land_LampHalogen_F';

@@ -1,16 +1,4 @@
-/*           INFO            */
-
-/*=================== O N L Y   E D I T   B E T W E E N   T H E S E   L I N E S====================*/
-
-    dev                 = "A/1-7";
-    author              = "A/1-7";
-
-    onLoadName          = "A/1-7 Training Grounds";
-    onLoadMission       = "Full feature map created for Alpha Company section practices";
-    onLoadIntro         = "A/1-7 Training Grounds";
-
-    loadScreen          = "images\loadScreen_co.paa";
-
+#include "author.hpp"
 /*=================== D O   N O T   E D I T   B E L O W   T H E S E   L I N E S====================*/
 
 /*           RULES            */
@@ -57,12 +45,12 @@
     };
 
     class CfgFunctions {
+        // Added by Raynor
+        #include "RaynorsTeleporter\cfgFunctions.hpp"
+
         #include "cScripts\CavFnc\CfgFunctions.hpp"
         #include "cScripts\Loadouts\script\CfgFunctions.hpp"
         #include "cScripts\ViewingDistance\CfgFunctions.hpp"
-		
-		// Added by Raynor
-        #include "RaynorsTeleporter\cfgFunctions.hpp"
     };
     #include "cScripts\Loadouts\script\CfgPoppy.hpp"
     #include "cScripts\ViewingDistance\GUI.h"
