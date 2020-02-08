@@ -38,7 +38,6 @@ addons[]=
 	"A3_Structures_F_Ind_DieselPowerPlant",
 	"A3_Structures_F_Exp_Infrastructure_Airports",
 	"A3_Structures_F_Exp_Industrial_Port",
-	"FIR_AirWeaponSystem_US",
 	"rhsusf_c_HEMTT_A4",
 	"ace_compat_rhs_usf3",
 	"A3_Soft_F_Exp_Truck_01",

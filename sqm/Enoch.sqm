@@ -30,7 +30,6 @@ addons[]=
 	"CUP_Misc_e_Config",
 	"A3_Structures_F_Heli_Ind_Airport",
 	"ace_medical",
-	"FIR_AirWeaponSystem_US",
 	"A3_Structures_F_Exp_Infrastructure_Airports",
 	"A3_Structures_F_Mil_Helipads",
 	"A3_Structures_F_Mil_Radar",
@@ -50,8 +49,7 @@ addons[]=
 	"A3_Misc_F_Helpers",
 	"A3_Structures_F_Heli_VR_Helpers",
 	"A3_Structures_F_Civ_Lamps",
-	"A3_Roads_F",
-	"FIR_A10C_F"
+	"A3_Roads_F"
 };
 class AddonsMetaData
 {

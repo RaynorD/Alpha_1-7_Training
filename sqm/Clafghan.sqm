@@ -46,7 +46,6 @@ addons[]=
 	"A3_Structures_F_Mil_Helipads",
 	"CUP_WarfareBuildings",
 	"CUP_Misc3_Config",
-	"FIR_AirWeaponSystem_US",
 	"A3_Ui_F",
 	"ace_medical"
 };

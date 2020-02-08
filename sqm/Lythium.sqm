@@ -45,7 +45,6 @@ addons[]=
 	"rhsusf_c_HEMTT_A4",
 	"ace_compat_rhs_usf3",
 	"A3_Soft_F_Exp_Truck_01",
-	"FIR_AirWeaponSystem_US",
 	"A3_Structures_F_Heli_Ind_Airport",
 	"A3_Structures_F_Ind_AirPort"
 };

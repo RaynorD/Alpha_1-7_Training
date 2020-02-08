@@ -23,7 +23,6 @@ addons[]=
 {
 	"A3_Ui_F",
 	"A3_Modules_F",
-	"FIR_AirWeaponSystem_US",
 	"rhsusf_c_HEMTT_A4",
 	"ace_compat_rhs_usf3",
 	"A3_Soft_F_Exp_Truck_01",
